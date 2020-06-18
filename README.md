@@ -1,2 +1,2 @@
 # Generator-kartek-wielkanocnych
-prosta aplikacja to tworzenia i zapisywania kartek świątecznych
+Aplikacja WPF do tworzenia i zapisywania kartek świątecznych
