@@ -1,0 +1,165 @@
+﻿<RibbonWindow  x:Class="RibbonWin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:RibbonWin="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Ribbon"
+        Title="Generator kartek" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Ribbon x:Name="RibbonWin"  SelectedIndex="0" IsMinimized="true">
+
+          
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                    <RibbonButton x:Name ="Save" SmallImageSource="Images\save.png" Visibility="Collapsed" Click="Save_Click" />
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu  >
+                    <RibbonApplicationMenuItem  x:Name="nowy_projekt"  Header="Nowy projekt" ImageSource="Images/copy.png" Click="nowy_projekt_Click"  >
+
+                    </RibbonApplicationMenuItem>
+
+
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+
+           
+            <RibbonTab x:Name="wzor" Header="Wybierz wzór"  Visibility="Collapsed" >
+                <RibbonGroup   >
+                    <RibbonRadioButton x:Name="wzor1" LargeImageSource="Images\wzorek1.jpg" Click="wzor1_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek1.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor2" LargeImageSource="Images\wzorek2.jpg" Click="wzor2_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek2.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor3" LargeImageSource="Images\wzorek3.jpg" Click="wzor3_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek3.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor4" LargeImageSource="Images\wzorek4.jpg" Click="wzor4_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek4.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor5" LargeImageSource="Images\wzorek5.jpg" Click="wzor5_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek5.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor6" LargeImageSource="Images\wzorek6.jpg" Click="wzor6_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek6.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor7" LargeImageSource="Images\wzorek7.jpg" Click="wzor7_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek7.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor8" LargeImageSource="Images\wzorek8.jpg" Click="wzor8_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek8.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor9" LargeImageSource="Images\wzorek9.jpg" Click="wzor9_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek9.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                    <RibbonRadioButton x:Name="wzor10" LargeImageSource="Images\wzorek10.jpg" Click="wzor10_Click" Foreground="{x:Null}">
+                        <RibbonRadioButton.Background>
+                            <ImageBrush ImageSource="Images/wzorek10.jpg"/>
+                        </RibbonRadioButton.Background>
+                    </RibbonRadioButton>
+                </RibbonGroup>
+
+
+            </RibbonTab>
+
+           
+            <RibbonTab x:Name="zyczenia" Header="Dodaj życzenia" Visibility="Collapsed">
+               
+                <RibbonGroup x:Name="zyczenia1" >
+                    <RibbonMenuButton LargeImageSource="Images\paste.png" Label="Tekst" >
+                        <RibbonTextBox x:Name="tekst_do_skopiowania" Text=" " />
+
+                    </RibbonMenuButton>
+
+                    <RibbonMenuButton LargeImageSource="Images\kolory.jpg" Label="Kolor tekstu">
+                        <RibbonButton x:Name="przycisk_bialy" Background="white" Label="Bialy" Click="przycisk_bialy_Click" />
+                        <RibbonButton x:Name="przycisk_czarny" Background="black" Label="Czarny" Foreground="White" Click="przycisk_czarny_Click" />
+                        <RibbonButton x:Name="przycisk_czerwony" Background="DarkRed" Label="Czerwony" Foreground="White" Click="przycisk_czerwony_Click" />
+                        <RibbonButton x:Name="przycisk_zolty" Background="Yellow" Label="Zolty" Foreground="Black" Click="przycisk_zolty_Click" />
+                        <RibbonButton x:Name="przycisk_zielony" Background="DarkGreen" Label="Zielony" Foreground="White" Click="przycisk_zielony_Click" />
+                        <RibbonButton x:Name="przycisk_niebieski" Background="DarkBlue" Label="Niebieski" Foreground="White" Click="przycisk_niebieski_Click" />
+                        <RibbonButton x:Name="przycisk_fioletowy" Background="Violet" Label="Fioletowy" Foreground="White" Click="przycisk_fioletowy_Click" />
+                        <RibbonButton x:Name="przycisk_rozowy" Background="DeepPink" Label="Rozowy" Foreground="White" Click="przycisk_rozowy_Click" />
+                   
+                    </RibbonMenuButton>
+
+                </RibbonGroup>
+
+
+
+            </RibbonTab>
+
+
+
+           
+        </Ribbon>
+        <DockPanel Name="UIPanel" Grid.Row="1">
+            <DockPanel.Background>
+                <ImageBrush ImageSource="Images/strona_glowna.png"/>
+            </DockPanel.Background>
+            <Grid Name="pole_kartki" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="360"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  />
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Canvas x:Name="plotno" Grid.Row="1" Grid.Column="1">
+                    <Canvas.Effect>
+                        <DropShadowEffect/>
+                    </Canvas.Effect>
+                    <Canvas.Background>
+                        <ImageBrush/>
+                    </Canvas.Background>
+
+                   
+
+
+                </Canvas>
+
+                <TextBlock x:Name="Box" Grid.Row="1" Grid.Column="1" TextWrapping="wrap"    Text="{Binding ElementName=tekst_do_skopiowania, Path=Text}" FontFamily="Showcard Gothic" FontSize="20" Margin="20,0"  >
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="2" ShadowDepth="2"/>
+                    </TextBlock.Effect>
+                 
+
+
+
+                </TextBlock>
+
+
+            </Grid>
+
+        </DockPanel>
+    </Grid>
+
+</RibbonWindow >
